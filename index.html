@@ -30,19 +30,27 @@
 </head>
 
 <body>
-
-  <header class="header">
+ <header class="header">
     <div class="container header__inner">
       <a href="#" class="logo">NEXORA</a>
-      <nav class="nav">
+           <nav class="nav">
         <a href="#services">Услуги</a>
+        <a href="#projects">Проекты</a>
         <a href="#why">Почему мы</a>
         <a href="#process">Процесс</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Контакты</a>
       </nav>
-      <a href="#contact" class="btn btn--small">Обсудить проект</a>
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+          <span class="theme-toggle__icon">🌙</span>
+        </button>
+        <a href="#contact" class="btn btn--small">Обсудить проект</a>
+      </div>
     </div>
   </header>
+
 
   <section class="hero">
     <div class="container hero__inner">
@@ -228,17 +236,217 @@
     </div>
   </section>
 
-  <section class="cta" id="contact">
+  <!-- ПРОЕКТЫ -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">Портфолио</span>
+        <h2 class="section-title">Проекты,<br>которые уже работают</h2>
+      </div>
+
+      <div class="projects__grid">
+
+        <a href="#" class="project-card reveal">
+          <div class="project-card__media project-card__media--1">
+            <span class="project-card__tag">Сайт</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">NEXORA</h3>
+            <p class="project-card__text">Корпоративный IT-сайт: адаптив, анимации, форма заявки.</p>
+            <span class="project-card__link">Смотреть →</span>
+          </div>
+        </a>
+
+        <a href="#" class="project-card reveal">
+          <div class="project-card__media project-card__media--2">
+            <span class="project-card__tag">Приложение</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Учёт товаров</h3>
+            <p class="project-card__text">Desktop-приложение на C# / WPF для склада и магазина.</p>
+            <span class="project-card__link">Смотреть →</span>
+          </div>
+        </a>
+
+        <a href="#" class="project-card reveal">
+          <div class="project-card__media project-card__media--3">
+            <span class="project-card__tag">Визуал</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Карточка товара</h3>
+            <p class="project-card__text">Инфографика и оформление для Wildberries / Ozon.</p>
+            <span class="project-card__link">Смотреть →</span>
+          </div>
+        </a>
+
+        <a href="#" class="project-card reveal">
+          <div class="project-card__media project-card__media--4">
+            <span class="project-card__tag">Презентация</span>
+          </div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">IT-стартап</h3>
+            <p class="project-card__text">Презентация продукта из 5 слайдов, оформление в Figma.</p>
+            <span class="project-card__link">Смотреть →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ТЕХНОЛОГИИ -->
+  <section class="tech" id="tech">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">Стек</span>
+        <h2 class="section-title">Технологии,<br>с которыми работаю</h2>
+      </div>
+
+      <div class="tech__grid reveal">
+        <span class="tech__item">HTML5</span>
+        <span class="tech__item">CSS3</span>
+        <span class="tech__item">JavaScript</span>
+        <span class="tech__item">C#</span>
+        <span class="tech__item">WPF</span>
+        <span class="tech__item">SQL</span>
+        <span class="tech__item">Git</span>
+        <span class="tech__item">Figma</span>
+      </div>
+
+      <div class="tech__stats reveal">
+        <div class="stat">
+          <span class="stat__num" data-count="24">0</span>
+          <span class="stat__label">проекта</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="18">0</span>
+          <span class="stat__label">клиентов</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="6">0</span>
+          <span class="stat__label">лет опыта</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="98">0</span>
+          <span class="stat__label">% довольных</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">Отзывы</span>
+        <h2 class="section-title">Что говорят клиенты</h2>
+      </div>
+
+      <div class="reviews__grid">
+        <article class="review reveal">
+          <p class="review__text">Сделали сайт быстро и аккуратно. Учли все правки, не пропадали на связи. Рекомендую.</p>
+          <div class="review__author">
+            <span class="review__avatar">А</span>
+            <div>
+              <span class="review__name">Алексей М.</span>
+              <span class="review__role">Владелец магазина</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review reveal">
+          <p class="review__text">Помогли с автоматизацией учёта. Сэкономили нам несколько часов рутины в день.</p>
+          <div class="review__author">
+            <span class="review__avatar">И</span>
+            <div>
+              <span class="review__name">Ирина К.</span>
+              <span class="review__role">Руководитель склада</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="review reveal">
+          <p class="review__text">Презентация и карточки для маркетплейса получились стильными. Продажи выросли.</p>
+          <div class="review__author">
+            <span class="review__avatar">Д</span>
+            <div>
+              <span class="review__name">Дмитрий С.</span>
+              <span class="review__role">Бренд-менеджер</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Частые вопросы</h2>
+      </div>
+
+      <div class="faq__list">
+        <details class="faq-item reveal">
+          <summary>Сколько стоит сайт?</summary>
+          <p>Зависит от задач. Лендинг — от 8 000 ₽, корпоративный сайт — от 20 000 ₽. Точную цену называю после обсуждения ТЗ.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Сколько времени занимает разработка?</summary>
+          <p>Лендинг — 3–7 дней. Корпоративный сайт или веб-приложение — от 2 недель. Сроки фиксируем до старта.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Работаете по договору?</summary>
+          <p>Да. Могу работать как по договору, так и через безопасную сделку на Kwork или другой платформе.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Что нужно для старта?</summary>
+          <p>Описание задачи, примеры сайтов, которые вам нравятся, и логотип/материалы, если есть. Остальное подскажу сам.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Вносите правки после сдачи?</summary>
+          <p>Да. Бесплатно — 2 недели после сдачи (мелкие правки). Дальше — по договорённости.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+   <section class="cta" id="contact">
     <div class="container">
       <div class="cta__inner reveal">
         <div class="cta__glow"></div>
-        <h2 class="cta__title">Есть идея проекта?</h2>
-        <p class="cta__text">
-          Давайте превратим её в работающий продукт.
-        </p>
-        <a href="mailto:hello@nexora.dev" class="btn btn--primary cta__btn">
-          Обсудить проект →
-        </a>
+        <div class="cta__head">
+          <h2 class="cta__title">Есть идея проекта?</h2>
+          <p class="cta__text">
+            Оставьте заявку — отвечу в течение часа.
+          </p>
+        </div>
+
+       <form class="contact-form" id="contactForm" action="https://formspree.io/f/xrpegrww" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Новая заявка с сайта NEXORA">
+<input type="hidden" name="_language" value="ru">
+          <div class="contact-form__row">
+            <div class="contact-form__field">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" placeholder="Как к вам обращаться" required>
+            </div>
+            <div class="contact-form__field">
+              <label for="contact">Email или Telegram</label>
+              <input type="text" id="contact" name="contact" placeholder="@username или email" required>
+            </div>
+          </div>
+
+          <div class="contact-form__field">
+            <label for="message">О проекте</label>
+            <textarea id="message" name="message" rows="5" placeholder="Коротко опишите задачу, сроки, бюджет" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary contact-form__submit">
+            Отправить заявку →
+          </button>
+
+          <p class="contact-form__note" id="formNote"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -246,15 +454,20 @@
   <footer class="footer">
     <div class="container footer__inner">
       <a href="#" class="logo">NEXORA</a>
-      <nav class="footer__nav">
+          <nav class="footer__nav">
         <a href="#services">Услуги</a>
-        <a href="#why">Почему мы</a>
-        <a href="#process">Процесс</a>
+        <a href="#projects">Проекты</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Контакты</a>
       </nav>
       <span class="footer__copy">© 2026 NEXORA</span>
     </div>
   </footer>
+    <a href="https://t.me/Phantomrush83" class="tg-float" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+    </svg>
+  </a>
    <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
   <script src="script.js"></script>
 </body>
