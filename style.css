@@ -725,3 +725,484 @@ a {
   0%, 100% { opacity: 0.4; }
   50%      { opacity: 1; }
 }
+
+/* ---------- Шапка: действия ---------- */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.theme-toggle:hover {
+  border-color: rgba(108, 92, 231, 0.5);
+  background: rgba(108, 92, 231, 0.1);
+}
+
+/* ---------- Проекты ---------- */
+.projects { padding: 120px 0; }
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+  transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(108, 92, 231, 0.4);
+}
+
+.project-card__media {
+  height: 220px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.project-card__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15), transparent 60%);
+  pointer-events: none;
+}
+
+.project-card__media--1 { background: linear-gradient(135deg, #6c5ce7, #3a8bfd); }
+.project-card__media--2 { background: linear-gradient(135deg, #3a8bfd, #00d4ff); }
+.project-card__media--3 { background: linear-gradient(135deg, #a855f7, #ec4899); }
+.project-card__media--4 { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+
+.project-card__tag {
+  position: relative;
+  z-index: 1;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.project-card__body { padding: 24px 26px 28px; }
+
+.project-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.project-card__text {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.55;
+}
+
+.project-card__link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-2);
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.project-card:hover .project-card__link {
+  transform: translateX(4px);
+}
+
+/* ---------- Технологии ---------- */
+.tech { padding: 120px 0; }
+
+.tech__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 72px;
+}
+
+.tech__item {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  transition: border-color 0.25s, background 0.25s, transform 0.25s;
+}
+
+.tech__item:hover {
+  border-color: rgba(108, 92, 231, 0.5);
+  background: rgba(108, 92, 231, 0.1);
+  transform: translateY(-2px);
+}
+
+.tech__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat__num {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stat__label {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ---------- Отзывы ---------- */
+.reviews { padding: 120px 0; }
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.review {
+  padding: 32px 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.review:hover {
+  border-color: rgba(58, 139, 253, 0.35);
+  transform: translateY(-4px);
+}
+
+.review__text {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.review__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.review__name {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.review__role {
+  display: block;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ---------- CTA с формой ---------- */
+.cta__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+  text-align: left;
+}
+
+.cta__head { position: relative; padding-top: 20px; }
+.cta__title { text-align: left; }
+.cta__text { text-align: left; }
+
+.contact-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 36px 32px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: rgba(10, 10, 15, 0.6);
+  backdrop-filter: blur(20px);
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form__field label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.contact-form__field input,
+.contact-form__field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  resize: vertical;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.contact-form__field input:focus,
+.contact-form__field textarea:focus {
+  outline: none;
+  border-color: rgba(108, 92, 231, 0.6);
+  background: rgba(108, 92, 231, 0.06);
+}
+
+.contact-form__field input::placeholder,
+.contact-form__field textarea::placeholder {
+  color: rgba(160, 160, 176, 0.6);
+}
+
+.contact-form__field input.is-error,
+.contact-form__field textarea.is-error {
+  border-color: #ef4444;
+}
+
+.contact-form__submit {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.contact-form__note {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+  min-height: 18px;
+}
+
+.contact-form__note.is-success { color: #22c55e; }
+.contact-form__note.is-error { color: #ef4444; }
+
+/* ---------- Светлая тема ---------- */
+body.light {
+  --bg: #f7f7fb;
+  --bg-soft: #ffffff;
+  --text: #0a0a0f;
+  --text-muted: #55555f;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+body.light .header {
+  background: rgba(247, 247, 251, 0.75);
+}
+
+body.light .logo {
+  background: linear-gradient(90deg, #0a0a0f, #6c5ce7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+body.light .service-card,
+body.light .why-card,
+body.light .project-card,
+body.light .review {
+  background: #ffffff;
+}
+
+body.light .contact-form {
+  background: #ffffff;
+}
+
+body.light .contact-form__field input,
+body.light .contact-form__field textarea {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+body.light .hero::before {
+  background: radial-gradient(circle, rgba(108, 92, 231, 0.15), transparent 60%);
+}
+
+/* ---------- Адаптив для новых секций ---------- */
+@media (max-width: 960px) {
+  .projects, .tech, .reviews { padding: 80px 0; }
+  .projects__grid { grid-template-columns: 1fr; }
+  .tech__stats { grid-template-columns: repeat(2, 1fr); }
+  .reviews__grid { grid-template-columns: 1fr; }
+  .cta__inner { grid-template-columns: 1fr; gap: 36px; }
+  .cta__head { padding-top: 0; }
+}
+
+@media (max-width: 560px) {
+  .contact-form { padding: 28px 20px; }
+  .contact-form__row { grid-template-columns: 1fr; }
+  .tech__stats { grid-template-columns: 1fr 1fr; }
+}
+/* ---------- FAQ ---------- */
+.faq { padding: 120px 0; }
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 900px;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 22px 26px;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.faq-item[open] {
+  border-color: rgba(108, 92, 231, 0.4);
+  background: rgba(108, 92, 231, 0.05);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--accent-2);
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+}
+
+.faq-item p {
+  margin-top: 14px;
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+body.light .faq-item {
+  background: #ffffff;
+}
+
+@media (max-width: 860px) {
+  .faq { padding: 80px 0; }
+  .faq-item { padding: 18px 20px; }
+  .faq-item summary { font-size: 16px; }
+}
+/* ---------- Плавающий Telegram ---------- */
+.tg-float {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #29b6f6, #0288d1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(2, 136, 209, 0.5);
+  z-index: 90;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tg-float:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 14px 40px rgba(2, 136, 209, 0.7);
+}
+
+.tg-float::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(41, 182, 246, 0.4);
+  animation: tgPulse 2s ease-out infinite;
+}
+
+@keyframes tgPulse {
+  0%   { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@media (max-width: 560px) {
+  .tg-float { left: 16px; bottom: 16px; width: 46px; height: 46px; }
+  .to-top { right: 16px; bottom: 16px; width: 46px; height: 46px; }
+}
